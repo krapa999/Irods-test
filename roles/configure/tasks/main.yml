@@ -1,7 +1,7 @@
 ---
 
   - name: configure PostgreSQL
-    template: src=postgresql.j2 dest=/etc/postgresql/9.6/main/postgresql.conf
+    template: src=postgresql.j2 dest=/etc/postgresql/9.4/main/postgresql.conf
 
   - name: Restart PostgreSQL
     service: name=postgresql state=restarted

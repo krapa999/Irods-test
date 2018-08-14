@@ -4,3 +4,5 @@
   roles:
      - postgresql
      - configure
+     - icat
+     - user_upload
