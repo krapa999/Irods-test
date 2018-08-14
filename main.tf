@@ -21,6 +21,13 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "web" {
   ami           = "${data.aws_ami.ubuntu.id}"
   instance_type = "t2.small"
+  user= EOF <<
+   "apt-get update -y";
+   "apt-get install software-properties-common";
+   "apt-add-repository ppa:ansible/ansible";
+   "apt-get update && sudo apt-get install ansible
+   >>
+   EOF
   
 
   tags {
