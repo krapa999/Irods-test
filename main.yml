@@ -2,7 +2,7 @@
 - hosts: localhost
   connection: local
   roles:
-     - postgresql
+     - postgres
      - configure
      - icat
      - user_upload
